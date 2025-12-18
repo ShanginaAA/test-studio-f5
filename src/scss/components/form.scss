@@ -11,6 +11,14 @@
   max-width: 720px;
   border: 1px solid $color-athens-gray;
   background: $color-base;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $color-royal-blue;
+    svg path {
+      fill: $color-royal-blue;
+    }
+  }
 }
 
 @media (min-width: 1440px) {

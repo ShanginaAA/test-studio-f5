@@ -10,6 +10,11 @@
   width: 100%;
   background: $color-base;
 
+  &:hover,
+  &:focus {
+    border: 4px solid $color-royal-blue;
+  }
+
   .job-company-wrap {
     display: flex;
     flex-direction: row;
