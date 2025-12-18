@@ -1,0 +1,133 @@
+@use '../base/variables' as *;
+
+.container-small {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 72px;
+  max-width: 960px;
+
+  .testimonials__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    max-width: 470px;
+
+    h3 {
+      text-align: center;
+      letter-spacing: -0.8px;
+    }
+  }
+
+  .carousel {
+    position: relative;
+
+    .slider-mask {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      .testimonials__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 44px;
+        max-width: 450px;
+
+        .icon-wrap-regular {
+          width: 72px;
+          height: 72px;
+          padding: 14px;
+        }
+
+        .testimonials__quote {
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 34px;
+          letter-spacing: -0.48px;
+          color: $color-bright-gray;
+        }
+
+        .testimonials__author {
+          color: $color-royal-blue;
+        }
+      }
+
+      .testimonials__image {
+        display: none;
+      }
+    }
+
+    .slide {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 12px;
+
+      position: absolute;
+      height: 48px;
+      width: 48px;
+      background: $color-base;
+      border: 1px solid $color-athens-gray;
+
+      &-previous {
+        right: 60.06px;
+        top: calc(50% - 48px / 2 - 154.54px);
+      }
+      &-next {
+        left: 85.76%;
+        right: 0.02%;
+        top: calc(50% - 48px / 2 - 154.54px);
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .container-small {
+    max-width: 960px;
+    width: 100%;
+
+    .carousel {
+      .slider-mask {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 126px;
+
+        .testimonials__content {
+          .icon-wrap-regular {
+            display: none;
+          }
+        }
+
+        .testimonials__image {
+          height: 439px;
+          display: block;
+          width: 100%;
+          background: url('../../img/testimonial-image.png') no-repeat center center;
+          background-size: cover;
+        }
+      }
+
+      .slide {
+        &-previous {
+          left: -0.02%;
+          right: 95.02%;
+          top: 89.51%;
+          bottom: -0.19%;
+        }
+        &-next {
+          left: 59.81px;
+          top: 89.51%;
+          bottom: -0.19%;
+        }
+      }
+    }
+  }
+}

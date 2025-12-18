@@ -1,0 +1,20 @@
+mixin link-card(icon = "", title = "", date = "", specializing = "", category = "", hours = "", location = "", salary = "")
+  .link
+    .job-company-wrap
+      .icon-wrap-regular
+        img(src=icon)
+      .title
+        .subheading-regular= title
+        .paragraph-small= date
+    h6= specializing
+    .job-tags
+      .job-category.job-category-text= category
+      .job-hours.job-hours-text= hours
+    .job-card-details-wrap
+      .job-details-wrap
+        include ../../img/location-icon.svg
+        .text= location
+      .job-details-wrap
+        include ../../img/salary-icon.svg
+        .text $
+        .text= salary

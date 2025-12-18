@@ -1,0 +1,142 @@
+@use '../base/variables' as *;
+
+.blog-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 16px;
+  width: 100%;
+  overflow: hidden;
+
+  &__container {
+    gap: 82px;
+  }
+
+  &__slider-mask {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 24px;
+    width: 100%;
+
+    animation: slider-animation 15s infinite linear;
+    animation-play-state: running;
+
+    &:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes slider-animation {
+      0%,
+      10% {
+        transform: translateX(0);
+      }
+      25% {
+        transform: translateX(calc(-100% - 24px));
+      }
+      35% {
+        transform: translateX(calc(-100% - 24px));
+      }
+      50% {
+        transform: translateX(calc(-200% - 48px));
+      }
+      60% {
+        transform: translateX(calc(-200% - 48px));
+      }
+      75% {
+        transform: translateX(calc(-300% - 72px));
+      }
+      85% {
+        transform: translateX(calc(-300% - 72px));
+      }
+      100% {
+        transform: translateX(calc(-400% - 96px));
+      }
+    }
+
+    .blog-card {
+      flex: 0 0 auto;
+      width: 100%;
+    }
+  }
+
+  &__slide {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+
+    position: absolute;
+    height: 48px;
+    width: 48px;
+    border: 1px solid $color-athens-gray;
+
+    &--previous {
+      left: 0%;
+      right: 85.78%;
+      top: -60px;
+    }
+
+    &--next {
+      left: 70.44px;
+      top: -59.88px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .blog-section {
+    padding: 64px 0;
+
+    &__container {
+      width: 100%;
+      gap: 56px;
+    }
+
+    &__slider-mask {
+      transform: translateX(calc(-390px - 24px));
+      @keyframes slider-animation {
+        0%,
+        10% {
+          transform: translateX(calc(-390px - 24px));
+        }
+        25% {
+          transform: translateX(calc(calc(-390px * 2) - calc(24px * 2)));
+        }
+        35% {
+          transform: translateX(calc(calc(-390px * 2) - calc(24px * 2)));
+        }
+        50% {
+          transform: translateX(calc(calc(-390px * 3) - calc(24px * 3)));
+        }
+        60% {
+          transform: translateX(calc(calc(-390px * 3) - calc(24px * 3)));
+        }
+        75% {
+          transform: translateX(calc(calc(-390px * 4) - calc(24px * 4)));
+        }
+        85% {
+          transform: translateX(calc(calc(-390px * 4) - calc(24px * 4)));
+        }
+        100% {
+          transform: translateX(calc(calc(-390px * 5) - calc(24px * 5)));
+        }
+      }
+    }
+
+    &__slide {
+      &--previous {
+        left: auto;
+        right: 70.19px;
+        top: -103.16px;
+      }
+
+      &--next {
+        left: 95.77%;
+        right: 0.02%;
+        top: -103.16px;
+      }
+    }
+  }
+}

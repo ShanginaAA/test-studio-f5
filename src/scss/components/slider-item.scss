@@ -1,0 +1,42 @@
+@use '../base/variables' as *;
+
+.slider-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 33px;
+  gap: 24px;
+  border: 1px solid #ebebef;
+  max-width: 337.5px;
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+  }
+
+  &__tag {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 9.1px 15px 10px;
+    gap: 4px;
+    background: $color-harp;
+  }
+
+  &__tag-text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: $color-green-pea;
+    padding-bottom: 0.9px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .slider-item {
+    padding: 41px;
+    max-width: 390px;
+  }
+}

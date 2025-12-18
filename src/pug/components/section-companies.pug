@@ -1,0 +1,24 @@
+include slider-item.pug
+
+.section-companies
+  .section-companies__container
+    .section-companies__title-wrapper
+      h3.section-companies__title Work with exciting companies
+      .section-companies__description Discover more than 1,600 open positions
+    .carousel
+      .section-companies__slider-mask
+        +slider-item("../../img/slack-icon.svg", "Slack", "400")
+
+        +slider-item("../../img/dribble-icon.svg", "Dribble", "65")
+        +slider-item("../../img/paypal-icon.svg", "Paypal", "6000")
+        +slider-item("../../img/spotify-icon.svg", "Spotify", "2000")
+        +slider-item("../../img/slack-icon.svg", "Slack", "400")
+
+        +slider-item("../../img/dribble-icon.svg", "Dribble", "65")
+        +slider-item("../../img/paypal-icon.svg", "Paypal", "6000")
+        +slider-item("../../img/spotify-icon.svg", "Spotify", "2000")
+        +slider-item("../../img/slack-icon.svg", "Slack", "400")
+      .section-companies__slide.section-companies__slide--previous
+        include ../../img/arrow-left.svg
+      .section-companies__slide.section-companies__slide--next
+        include ../../img/arrow-right.svg

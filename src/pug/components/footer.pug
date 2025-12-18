@@ -1,0 +1,19 @@
+include input.pug
+include custom-button.pug
+
+footer.footer.section-regular
+  .container-regular.footer__container
+    .footer__logo
+      include ../../img/logo.svg
+    .footer__content
+      .footer__column
+        div(style="margin-bottom: 16px")
+          .detail.detail__text pages
+        .footer__link Home
+        .footer__link Company
+        .footer__link Blog
+      .footer__form
+        .detail.detail__text Sign up to our newsletter
+        .footer__form-email
+          +input("email", "Email address")
+          +custom-button("Get Started")

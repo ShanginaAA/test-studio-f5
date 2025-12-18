@@ -1,0 +1,23 @@
+@use '../base/variables' as *;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 13px;
+  gap: 12px;
+  width: calc(100% - 5.5px);
+  max-width: 720px;
+  border: 1px solid $color-athens-gray;
+  background: $color-base;
+}
+
+@media (min-width: 1440px) {
+  .form {
+    flex-direction: row;
+    gap: 8px;
+    max-width: 720px;
+    z-index: 2;
+  }
+}

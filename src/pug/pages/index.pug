@@ -1,0 +1,19 @@
+extends ../layouts/main
+
+
+block content
+  main
+    include ../components/banner
+    include ../components/header
+    include ../components/section-regular
+    include ../components/section-companies
+    .section-regular
+      .container-regular
+        include ../components/feature-grid
+    .section-regular.background-gray
+      include ../components/testimonials
+    include ../components/blog
+    .section-regular
+      .container-regular(style="gap:0")
+        include ../components/cta-block
+    include ../components/footer

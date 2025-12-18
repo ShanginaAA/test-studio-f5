@@ -1,0 +1,24 @@
+include custom-button.pug
+include link-card.pug
+
+.section-regular.background-gray
+  .section-regular__container
+    .section-regular__header
+      .section-regular__content
+        .section-regular__title-wrapper
+          h3.section-regular__title Explore the latest job openings
+        .section-regular__description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a mi rhoncus, pharetra leo et, efficitur tortor. Fusce vel convallis magna. 
+      +custom-button("See All Jobs")
+    .section-regular__list
+      .section-regular__list-item
+        +link-card("../../img/dribble-icon.svg", "Dribble", "October 25, 2022", "Front End Developer", "Marketing", "Part Time", "San Antonio", "130k-160k")
+      .section-regular__list-item
+        +link-card("../../img/dribble-icon.svg", "Dribble", "October 25, 2022", "Backend Developer", "Design", "Full Time", "Dallas", "50k-70k")       
+      .section-regular__list-item
+        +link-card("../../img/tokopedia-icon.svg", "Tokopedia", "March 30, 2021", "Scrum Master", "Marketing", "Part Time", "San Antonio", "130k-160k")
+      .section-regular__list-item
+        +link-card("../../img/facebook-icon.svg", "Facebook", "March 30, 2021", "Lead Technical Architect", "Technology", "Full Time", "Melbourne", "210k-240k")
+      .section-regular__list-item
+        +link-card("../../img/spotify-icon.svg", "Spotify", "March 30, 2021", "Digital Media Strategist", "Business", "Casual", "New York", "50k-70k")
+      .section-regular__list-item
+        +link-card("../../img/paypal-icon.svg", "Paypal", "March 30, 2021", "Systems Administrator", "Business", "Casual", "California", "40k-50k")

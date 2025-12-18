@@ -1,0 +1,13 @@
+mixin blog-card(image = "", category = "", title = "", date = "")
+  .blog-card
+    .blog-card__thumbnail(style=`background: url('${image}') no-repeat center center`)
+    .blog-card__text-wrapper
+      .blog-card__category
+        .blog-card__category-text= category
+      h5.blog-card__title= title
+      .blog-card__created-wrapper
+        .blog-card__dot
+        .blog-card__created= date
+      .blog-card__link-btn
+        .blog-card__link-btn-text Read More
+        include ../../img/arrow-btn.svg

@@ -1,0 +1,116 @@
+@use '../base/variables' as *;
+
+.link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 25px 29px;
+  gap: 14px;
+  border: 1px solid $color-athens-gray;
+  width: 100%;
+  background: $color-base;
+
+  .job-company-wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+
+    .title {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .subheading-regular {
+        margin-bottom: -0.7px;
+      }
+
+      .paragraph-small {
+        padding-bottom: 0.69px;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: -0.28px;
+        color: $color-shuttle-gray;
+      }
+    }
+  }
+
+  .job-tags {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 8px;
+
+    .job-category {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 6px 12px;
+      background: $color-link-water;
+
+      &-text {
+        font-size: 14px;
+        line-height: 17px;
+        color: $color-royal-blue;
+      }
+    }
+
+    .job-hours {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 6px 12px;
+      background: $color-seashell-peach;
+
+      &-text {
+        font-size: 14px;
+        line-height: 17px;
+        color: $color-tussock;
+      }
+    }
+  }
+
+  .job-card-details-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: flex-start;
+    padding-right: 43.45px;
+    gap: 0px 24px;
+
+    .job-details-wrap {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 4px;
+      width: 100%;
+
+      .text {
+        padding-bottom: 0.9px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: -0.42px;
+        color: $color-shuttle-gray;
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .link {
+    max-width: 358px;
+    height: 262px;
+    gap: 24px;
+
+    .job-card-details-wrap {
+      padding: 0;
+
+      .job-details-wrap {
+        width: auto;
+      }
+    }
+  }
+}

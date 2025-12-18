@@ -1,0 +1,25 @@
+@use '../base/variables' as *;
+
+.custom-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  background: $color-royal-blue;
+  width: 100%;
+
+  &__text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.28px;
+    color: $color-base;
+  }
+}
+
+@media (min-width: 1440px) {
+  .custom-button {
+    width: auto;
+  }
+}

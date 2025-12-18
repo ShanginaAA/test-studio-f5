@@ -1,0 +1,153 @@
+@use '../base/variables' as *;
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 12px;
+  width: 100%;
+  height: 93px;
+  margin: 0 auto;
+  border-bottom: 1px solid $color-athens-gray;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 10px;
+  }
+
+  &__logo {
+    height: 40px;
+  }
+
+  &__middle {
+    display: none;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &__menu-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 11px 11px;
+    border: 1px solid $color-athens-gray;
+  }
+
+  &__menu-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    width: 24px;
+    height: 24px;
+  }
+
+  &__actions {
+    display: none;
+  }
+}
+
+@media (min-width: 1440px) {
+  .banner {
+    width: 100%;
+    height: 92px;
+    justify-content: center;
+    padding: 0;
+
+    &__container {
+      padding: 0;
+      max-width: 1140px;
+      width: 100%;
+      height: 44px;
+    }
+
+    &__left {
+      padding: 0;
+    }
+
+    &__middle {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+    }
+
+    &__nav-link {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px 16px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: -0.28px;
+      color: $color-bright-gray;
+
+      &--active {
+        color: $color-royal-blue;
+      }
+    }
+
+    &__right {
+      .banner__menu-btn {
+        display: none;
+      }
+    }
+
+    &__actions {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 0px;
+      gap: 8px;
+      isolation: isolate;
+    }
+
+    &__action-link {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px 16px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: -0.28px;
+      color: $color-bright-gray;
+    }
+
+    &__action-button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 20px;
+      background: $color-royal-blue;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: -0.28px;
+      color: $color-base;
+    }
+  }
+}

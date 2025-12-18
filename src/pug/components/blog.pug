@@ -1,0 +1,22 @@
+include blog-card.pug
+
+.blog-section
+  .container-regular.blog-section__container
+    h3.blog-section__title Get the latest news about jobs!
+    .carousel
+      .slider-mask.blog-section__slider-mask
+        +blog-card("img/blog-image4.png", "Careers", "Ten things to nail your next job Interview", "March 24, 2021")
+      
+        +blog-card("img/blog-image1.png", "Resources", "Finding employees in the gig economy", "October 24, 2022")
+        +blog-card("img/blog-image2.png", "Education", "How to make a great first impression everytime", "October 24, 2022")
+        +blog-card("img/blog-image3.png", "Trends", "Find out the best paying careers in 2022", "October 24, 2022")
+        +blog-card("img/blog-image4.png", "Careers", "Ten things to nail your next job Interview", "March 24, 2021")
+
+        +blog-card("img/blog-image1.png", "Resources", "Finding employees in the gig economy", "October 24, 2022")
+        +blog-card("img/blog-image2.png", "Education", "How to make a great first impression everytime", "October 24, 2022")
+        +blog-card("img/blog-image3.png", "Trends", "Find out the best paying careers in 2022", "October 24, 2022")
+        +blog-card("img/blog-image4.png", "Careers", "Ten things to nail your next job Interview", "March 24, 2021")        
+      .slide.blog-section__slide.blog-section__slide--previous
+        include ../../img/arrow-left.svg
+      .slide.blog-section__slide.blog-section__slide--next
+        include ../../img/arrow-right.svg
