@@ -104,10 +104,9 @@
       line-height: 24px;
       letter-spacing: -0.28px;
       color: $color-bright-gray;
-
-      &--active {
-        color: $color-royal-blue;
-      }
+    }
+    .active {
+      color: $color-royal-blue;
     }
 
     &__right {
