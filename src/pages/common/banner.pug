@@ -1,3 +1,5 @@
+include ../includes/index/custom-button.pug
+
 header
   .banner
     .banner__container
@@ -19,4 +21,4 @@ header
         
         .banner__actions
           a.banner__action-link(href="#") Post a Job
-          a.banner__action-button(href="#") Log in
+          +custom-button("Log in")

@@ -17,6 +17,15 @@
     letter-spacing: -0.28px;
     color: $color-base;
   }
+
+  &:hover {
+    background: $color-shark;
+  }
+
+  &:focus {
+    background: $color-shark;
+    outline: 1px solid $color-royal-blue;
+  }
 }
 
 @media (min-width: 1440px) {

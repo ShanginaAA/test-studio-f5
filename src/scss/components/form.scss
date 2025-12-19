@@ -14,7 +14,7 @@
 
   &:hover,
   &:focus {
-    border: 1px solid $color-royal-blue;
+    outline: 1px solid $color-royal-blue;
 
     svg path {
       fill: $color-royal-blue;
