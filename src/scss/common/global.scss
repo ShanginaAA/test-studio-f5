@@ -1,0 +1,151 @@
+@use 'base/variables' as *;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 700;
+  color: $color-ebony;
+  margin: 0;
+}
+
+h1 {
+  font-size: 64px;
+  line-height: 77px;
+}
+h2 {
+  font-size: 48px;
+  line-height: 58px;
+}
+h3 {
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: -0.8px;
+}
+h4 {
+  font-size: 32px;
+  line-height: 45px;
+  letter-spacing: -0.64px;
+}
+h5 {
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.4px;
+}
+h6 {
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.paragraph-regular {
+  line-height: 29px;
+  letter-spacing: -0.32px;
+  color: $color-bright-gray;
+}
+
+.subheading-regular {
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: -0.32px;
+  color: $color-ebony;
+}
+
+.paragraph-small {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: -0.28px;
+  color: $color-shuttle-gray;
+}
+
+.detail {
+  padding-bottom: 12px;
+
+  &__text {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 25px;
+    letter-spacing: 1.12px;
+    text-transform: uppercase;
+    color: $color-royal-blue;
+  }
+
+  @media (min-width: 1440px) {
+    display: none;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  min-width: 375px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  background: $color-base;
+}
+
+.section-regular {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 16px;
+  width: 100%;
+
+  @media (min-width: 1440px) {
+    padding: 64px 0;
+  }
+}
+
+.container-regular {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 5.5px);
+  max-width: 1140px;
+}
+
+.background-gray {
+  background: $color-gray;
+}
+
+.icon-wrap-regular {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid $color-athens-gray;
+
+  background: $color-base;
+
+  width: 56px;
+  height: 56px;
+}
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  position: relative;
+}
