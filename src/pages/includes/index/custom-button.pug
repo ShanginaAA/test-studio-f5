@@ -1,4 +1,4 @@
-mixin custom-button(text = "", variant="primary")
+mixin custom-button(text = "", variant="primary", disabled=false)
   - const variants = { primary: "custom-button__primary", secondary: "custom-button__secondary", outline: "custom-button__outline" }
-  button.custom-button(class=variants[variant] type="button")
+  button.custom-button(class=variants[variant] disabled=disabled || null type="button" )
     span.custom-button__text= text
