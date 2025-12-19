@@ -11,8 +11,8 @@ const { deleteAsync } = require('del');
 
 const paths = {
   pug: {
-    src: 'src/pug/pages/*.pug',
-    watch: 'src/pug/**/*.pug',
+    src: 'src/pages/*.pug',
+    watch: 'src/**/*.pug',
     dest: 'dist/',
   },
   scss: {
