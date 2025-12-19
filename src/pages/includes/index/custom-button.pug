@@ -1,2 +1,4 @@
-mixin custom-button(text = "")
-  button.custom-button.custom-button__text= text
+mixin custom-button(text = "", variant="primary")
+  - const variants = { primary: "custom-button__primary", secondary: "custom-button__secondary", outline: "custom-button__outline" }
+  button.custom-button(class=variants[variant] type="button")
+    span.custom-button__text= text

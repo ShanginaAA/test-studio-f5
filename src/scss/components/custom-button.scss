@@ -6,25 +6,40 @@
   justify-content: center;
   align-items: center;
   padding: 10px 20px;
-  background: $color-royal-blue;
   width: 100%;
   cursor: pointer;
+
+  &__primary {
+    background: $color-royal-blue;
+    color: $color-base;
+
+    &:hover {
+      background: $color-shark;
+    }
+
+    &:focus {
+      background: $color-shark;
+      outline: 1px solid $color-royal-blue;
+    }
+  }
+
+  &__outline {
+    background: $color-base;
+    color: $color-ebony;
+    border: 1px solid $color-athens-gray;
+
+    &:hover,
+    &:focus {
+      border-color: $color-royal-blue;
+      color: $color-royal-blue;
+    }
+  }
 
   &__text {
     font-weight: 500;
     font-size: 14px;
     line-height: 24px;
     letter-spacing: -0.28px;
-    color: $color-base;
-  }
-
-  &:hover {
-    background: $color-shark;
-  }
-
-  &:focus {
-    background: $color-shark;
-    outline: 1px solid $color-royal-blue;
   }
 }
 
