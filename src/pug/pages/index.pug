@@ -1,19 +1,17 @@
-extends ../layouts/main
+extends common/layout
 
 
 block content
   main
-    include ../components/banner
-    include ../components/header
-    include ../components/section-regular
-    include ../components/section-companies
+    include includes/index/section-header
+    include includes/index/section-regular
+    include includes/index/section-companies
     .section-regular
       .container-regular
-        include ../components/feature-grid
+        include includes/index/feature-grid
     .section-regular.background-gray
-      include ../components/testimonials
-    include ../components/blog
+      include includes/index/testimonials
+    include includes/index/blog
     .section-regular
       .container-regular(style="gap:0")
-        include ../components/cta-block
-    include ../components/footer
+        include includes/index/cta-block
